@@ -107,6 +107,7 @@ class Browser:
             self.request(lambda: self.session.post(self.url, **args))
         else:
             self.request(lambda: self.session.post(self.url, data=self.data, **args))
+            self.data = None
         return self
 
     def request(self, fn):
