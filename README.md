@@ -8,10 +8,7 @@ _I give thanks to my God always for you because of the grace of God that was giv
 pip install smallbrowser
 ```
 
-A small HTTP browser library in Python based on the `requests` library.
-You can omit using this library and entirely use the `requests` library and achieve the same functionality.
-
-This library is designed for the poor. That they may receive help in times of difficulty.
+A small HTTP browser library in Python based on the [requests](https://requests.readthedocs.io/en/master/) library.
 
 ## Dependency
 
