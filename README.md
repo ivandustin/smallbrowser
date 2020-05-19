@@ -47,4 +47,4 @@ When initializing the `Browser` object, you need to pass a path to a directory, 
 For debugging purposes, you may open the `browser.storage/contents` and `browser.storage/responses` directory that contains information about all your visited websites.
 
 
-*GRACE AND PEACE TO YOU FROM OUR LORD JESUS CHRIST*
+*GRACE AND PEACE TO YOU FROM OUR LORD JESUS CHRIST. OUR LORD JESUS LOVES YOU.*
