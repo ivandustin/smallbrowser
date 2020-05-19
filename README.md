@@ -1,3 +1,7 @@
+_Grace to you and peace from God our Father and the Lord Jesus Christ._
+
+_I give thanks to my God always for you because of the grace of God that was given you in Christ Jesus, that in every way you were enriched in him in all speech and all knowledge— even as the testimony about Christ was confirmed among you— so that you are not lacking in any gift, as you wait for the revealing of our Lord Jesus Christ, who will sustain you to the end, guiltless in the day of our Lord Jesus Christ. God is faithful, by whom you were called into the fellowship of his Son, Jesus Christ our Lord._
+
 # smallbrowser
 
 ```bash
@@ -7,9 +11,7 @@ pip install smallbrowser
 A small HTTP browser library in Python based on the `requests` library.
 You can omit using this library and entirely use the `requests` library and achieve the same functionality.
 
-This library is designed for the poor.
-
-*Glory be to our LORD Jesus Christ.*
+This library is designed for the poor. That they may receive help in times of difficulty.
 
 ## Dependency
 
@@ -47,4 +49,4 @@ When initializing the `Browser` object, you need to pass a path to a directory, 
 For debugging purposes, you may open the `browser.storage/contents` and `browser.storage/responses` directory that contains information about all your visited websites.
 
 
-*GRACE AND PEACE TO YOU FROM OUR LORD JESUS CHRIST. OUR LORD JESUS LOVES YOU.*
+_GLORY BE TO OUR LORD JESUS CHRIST. JESUS LOVES YOU._

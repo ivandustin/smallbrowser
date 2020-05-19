@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setup(
     name = 'smallbrowser',
     packages = ['smallbrowser'],
-    version = '0.1.5',
+    version = '0.1.6',
     license ='gpl-3.0',
     description = "A small HTTP browser library in Python based on the 'requests' library",
     long_description = long_description,
