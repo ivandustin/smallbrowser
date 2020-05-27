@@ -5,7 +5,7 @@ from pyquery import PyQuery
 from pathlib import Path
 from urllib.parse import urlparse, quote, urljoin
 
-MAX_PATH = 260
+MAX_PATH = 255
 
 class RequestError(Exception):
     pass
