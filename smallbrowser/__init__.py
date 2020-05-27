@@ -1,8 +1,11 @@
+import os
 import requests
 import pickle
 from pyquery import PyQuery
 from pathlib import Path
 from urllib.parse import urlparse, quote, urljoin
+
+MAX_PATH = 260
 
 class RequestError(Exception):
     pass
@@ -48,11 +51,9 @@ class BrowserStorage:
 
     def save_response(self, url, response):
         if (self.path != None):
-            maxlen      = 255 - len(str(self.responses))
-            truncated   = url[0:maxlen]
-            filename    = quote(truncated, safe="")
-            responses   = Path(self.responses, filename)
-            contents    = Path(self.contents, filename)
+            filename    = quote(url, safe="")
+            responses   = truncate_path(Path(self.responses, filename))
+            contents    = truncate_path(Path(self.contents, filename))
             with responses.open("w", encoding="utf-8") as file:
                 file.write("URL\n%s\n\n" % url)
                 file.write("STATUS CODE\n%d\n\n" % response.status_code)
@@ -118,3 +119,6 @@ class Browser:
         self.storage.save()
         self.response.html = lambda: PyQuery(self.response.text)
         return self
+
+def truncate_path(path):
+    return Path(str(path.resolve())[0:MAX_PATH])
