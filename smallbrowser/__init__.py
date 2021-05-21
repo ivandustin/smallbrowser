@@ -7,9 +7,6 @@ from urllib.parse import urlparse, quote, urljoin
 
 MAX_PATH = 255
 
-class RequestError(Exception):
-    pass
-
 class BrowserStorage:
     def __init__(self, browser, path = None):
         self.browser    = browser
@@ -114,8 +111,7 @@ class Browser:
     def request(self, fn):
         self.response = fn()
         self.storage.save_response(self.url, self.response)
-        if (self.response.status_code != 200):
-            raise RequestError("Request failed url=%s status=%d" % (self.url, self.response.status_code))
+        self.response.raise_for_status()
         self.storage.save()
         self.response.html = lambda: PyQuery(self.response.text)
         return self
