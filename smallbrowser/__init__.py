@@ -49,8 +49,8 @@ class BrowserStorage:
     def save_response(self, url, response):
         if (self.path != None):
             filename    = quote(url, safe="")
-            responses   = truncate_path(Path(self.responses, filename))
-            contents    = truncate_path(Path(self.contents, filename))
+            responses   = truncate_path(Path(self.responses.resolve(), filename))
+            contents    = truncate_path(Path(self.contents.resolve(), filename))
             with responses.open("w", encoding="utf-8") as file:
                 file.write("URL\n%s\n\n" % url)
                 file.write("STATUS CODE\n%d\n\n" % response.status_code)
@@ -117,4 +117,4 @@ class Browser:
         return self
 
 def truncate_path(path):
-    return Path(str(path.resolve())[0:MAX_PATH])
+    return Path(str(path)[0:MAX_PATH])
